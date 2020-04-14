@@ -1,0 +1,25 @@
+{
+	"name": "eat-de-burger",
+	"version": "1.0.0",
+	"description": "Fun app that lets users create and name their own uniquely tasty hamburgers. This Node based app follows MVC design pattern and utilizes MySQL, Express, and Handlebars.",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ingridhoffman/Eat-De-Burger.git"
+	},
+	"author": "Ingrid Hoffman",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ingridhoffman/Eat-De-Burger/issues"
+	},
+	"homepage": "https://github.com/ingridhoffman/Eat-De-Burger#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"express-handlebars": "^4.0.3",
+		"mysql": "^2.18.1"
+	}
+}
