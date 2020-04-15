@@ -13,8 +13,13 @@ router.get("/", (req, res) => {
 		const hbsObject = {
 			burgers: data,
 		};
-		console.log(hbsObject);
 		res.render("index", hbsObject);
+	});
+});
+
+router.post("/api/burgers", (req, res) => {
+	burger.create("burger_name", req.body.burger, (result) => {
+		res.json({ id: result.insertId });
 	});
 });
 
