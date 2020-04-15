@@ -8,6 +8,9 @@ const burger = {
 	create(cols, vals, cb) {
 		orm.insertOne("burgers", cols, vals, cb);
 	},
+	update(id, col, val, cb) {
+		orm.updateOne("burgers", id, col, val, cb);
+	},
 };
 
 // Export

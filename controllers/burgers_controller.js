@@ -16,10 +16,18 @@ router.get("/", (req, res) => {
 		res.render("index", hbsObject);
 	});
 });
-
 router.post("/api/burgers", (req, res) => {
 	burger.create("burger_name", req.body.burger, (result) => {
 		res.json({ id: result.insertId });
+	});
+});
+router.put("/api/burgers/:id", (req, res) => {
+	burger.update(req.params.id, "devoured", true, (result) => {
+		if (result.changedRows == 0) {
+			return res.status(404).end();
+		} else {
+			res.status(200).end();
+		}
 	});
 });
 

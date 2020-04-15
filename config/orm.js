@@ -17,6 +17,13 @@ const orm = {
 			cb(result);
 		});
 	},
+	updateOne(table, id, col, val, cb) {
+		const query = "UPDATE ?? SET ??=? WHERE id=?";
+		connection.query(query, [table, col, val, id], (err, result) => {
+			if (err) throw err;
+			cb(result);
+		});
+	},
 };
 
 // Export
