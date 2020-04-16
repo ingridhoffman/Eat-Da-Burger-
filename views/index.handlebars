@@ -1,28 +1,40 @@
-<h1>Eat De Burger!</h1>
-
-<ul>
-	{{#each burgers}}
-	{{#unless this.devoured}}
-	<li>
-		{{this.id}}: {{this.burger_name}}
-		<button data-id="{{this.id}}" class="devourButton">Devour It!</button>
-	</li>
-	{{/unless}}
-	{{/each}}
-</ul>
-<hr>
-<ul>
-	{{#each burgers}}
-	{{#if this.devoured}}
-	<li>
-		{{this.burger_name}}
-	</li>
-	{{/if}}
-	{{/each}}
-</ul>
-
-
-<form id="newBurger">
-	<textarea type="text" name="burgerName" id="burgerName"></textarea>
-	<button type="submit">Add Burger</button>
-</form>
+<div class="container mt-5 mx-auto">
+	<div class="row justify-content-center">
+		<h1>Eat De Burger!</h1>
+	</div>
+	<div class="row bg-white">
+		<div class="col-sm-4 p-3">
+			<img src="../assets/img/0810e3ef670b48b91e07f11bb7be5de3.jpg" class="img-fluid" alt="Very tall hamburger">
+		</div>
+		<div class="col-sm-8 p-3">
+			<h2>Tasty Burgers to Devour:</h2>
+			{{#each burgers}}
+			{{#unless this.devoured}}
+			<div class="card m-1">
+				<div class="card-body p-2">
+					<p>{{this.burger_name}}</p>
+					<button class="devourButton d-flex ml-auto" data-id="{{this.id}}" class="devourButton">Devour It!</button>
+				</div>
+			</div>
+			{{/unless}}
+			{{/each}}
+			<hr>
+			<h3>Can't find one you like? Add a new burger:</h3>
+			<form id="newBurger">
+				<textarea type="text" class="form-control mb-2" name="burgerName" id="burgerName"></textarea>
+				<button class="d-flex ml-auto" type="submit">Add Burger</button>
+			</form>
+			<hr>
+			<h3>Sorry! These burgers have already been devoured:</h3>
+			{{#each burgers}}
+			{{#if this.devoured}}
+			<div class="card m-1">
+				<div class="card-body p-2">
+					<p>{{this.burger_name}}</p>
+				</div>
+			</div>
+			{{/if}}
+			{{/each}}
+		</div>
+	</div>
+</div>
