@@ -1,6 +1,6 @@
 # Eat-De-Burger
 
-Fun app that lets users create and name their own uniquely tasty hamburgers. This Node based app follows MVC design pattern and utilizes MySQL, Express, and Handlebars.
+Fun web interface that allows users to imagine and (virtually) devour their own uniquely tasty hamburgers. This Node based app follows MVC design pattern and utilizes MySQL, Express, and Handlebars.
 
 # EmployeeTracker
 
@@ -11,7 +11,7 @@ A solution for managing a company's employees using node, express, inquirer, and
 ```
 AS A lover of hamburgers
 I WANT a webpage that lets me enter unique burger ideas
-SO THAT I can "virtuallY" devour them
+SO THAT I can (virtually) devour them
 ```
 
 ### Acceptance Criteria

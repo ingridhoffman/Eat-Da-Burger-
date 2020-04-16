@@ -17,9 +17,13 @@ router.get("/", (req, res) => {
 	});
 });
 router.post("/api/burgers", (req, res) => {
-	burger.create("burger_name", req.body.burger, (result) => {
-		res.json({ id: result.insertId });
-	});
+	if (req.body.burger.length == 0) {
+		console.log("You must create a burger before adding it.");
+	} else {
+		burger.create("burger_name", req.body.burger, (result) => {
+			res.json({ id: result.insertId });
+		});
+	}
 });
 router.put("/api/burgers/:id", (req, res) => {
 	burger.update(req.params.id, "devoured", true, (result) => {
