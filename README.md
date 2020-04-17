@@ -32,39 +32,9 @@ THEN they will remain in the database even after they are devoured
 
 ```
 
-## Installation
-
-Install the application package
-
-```
-install_github("ingridhoffman/Eat-De-Burger")
-```
-
-Install dependencies
-
-```
-npm i
-```
-
-Install Nodemon if you do not already have it
-
-```
-npm i -g nodemon
-```
-
-Use the .sql files in the db folder to create and populate the database in MySQL
-
 ## Usage
 
-Use nodemon to start the server
-
-```
-nodemon server.js
-```
-
-Open your browser and navigate to the local server page
-
-### Known Issues
+https://eat-de-burger.herokuapp.com/
 
 ## Credits
 
