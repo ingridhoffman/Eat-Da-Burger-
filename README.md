@@ -1,12 +1,9 @@
 # Eat-De-Burger
+### Homework 13: MySQL, Node, Express, Handlebars
 
 Fun web interface that allows users to imagine and (virtually) devour their own uniquely tasty hamburgers. This Node based app follows MVC design pattern and utilizes MySQL, Express, and Handlebars.
 
-# EmployeeTracker
-
-A solution for managing a company's employees using node, express, inquirer, and MySQL.
-
-## User Story
+# User Story
 
 ```
 AS A lover of hamburgers
